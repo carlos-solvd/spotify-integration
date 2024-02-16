@@ -1,5 +1,8 @@
+import { ProfileCard } from "@/components/profileCard";
+
 export default function Home() {
+  
   return (
-    <h1>Hello</h1>
+    <ProfileCard/>
   );
 }
