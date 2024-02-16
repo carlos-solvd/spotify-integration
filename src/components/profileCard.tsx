@@ -14,8 +14,8 @@ export function ProfileCard() {
    * https://developer.spotify.com/documentation/web-api/tutorials/client-credentials-flow
    */
 
-  const client_id = "257c271479594ec6b5e47ff9e8d8e508";
-  const client_secret = "82b197cc74484f949f42e5c6fa21d9ce";
+  const client_id = process.env;
+  const client_secret = process.env;
 
   async function getToken() {
     const response = await fetch("https://accounts.spotify.com/api/token", {
@@ -36,7 +36,7 @@ export function ProfileCard() {
 
   async function getTrackInfo(access_token) {
     const response = await fetch(
-      "https://api.spotify.com/v1/artists/3nFkdlSjzX9mRTtwJOzDYB/albums",
+      "https://api.spotify.com/v1/tracks/02OMdYU4K7TTsZKTqoZue9",
       {
         method: "GET",
         headers: { Authorization: "Bearer " + access_token },
